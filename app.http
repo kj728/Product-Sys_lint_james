@@ -1,0 +1,28 @@
+GET http://localhost:4000/categories
+
+####
+
+POST http://localhost:4000/categories
+Content-Type: application/json
+
+{
+    "NAME": "dummy category"
+}
+
+#######
+
+GET http://localhost:4000/categories/622b9278-a946-4733-925d-a88814ff565d
+
+
+#####
+
+PATCH  http://localhost:4000/categories/a66530a0-1c50-4236-b0a0-06218dc366f2
+Content-Type: application/json
+
+{
+    "NAME": "Books"
+}
+
+
+####
+ DELETE  http://localhost:4000/categories/3883e64e-690d-4f91-b4a7-a4beae7be813
