@@ -4,8 +4,8 @@ import { addProduct, deleteProduct, getProduct, getProductByCategory, getProduct
 const productRouter = Router();
 productRouter.post("",addProduct)
 productRouter.get("",getProducts)
-// productRouter.get("/:id",getProduct)
-productRouter.get("/:id",getProductByCategory)
+ productRouter.get("/:id",getProduct)
+productRouter.get("/category/:id",getProductByCategory)
 productRouter.patch("/:id",updateProduct)
 productRouter.delete("/:id",deleteProduct)
 

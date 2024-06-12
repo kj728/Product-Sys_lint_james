@@ -56,20 +56,21 @@ export const getProduct = async (req: Request<{ id: string }>, res: Response) =>
 };
 
 
-export const getProductByCategory = async(req:Request, res:Response)=>{
+export const getProductByCategory = async(req:Request<{id:string}>, res:Response)=>{
     try {
         //make a connection to the server
         const pool = await mssql.connect(sqlConfig);
 
+
         //make a request
         const products = (await pool.request()
            .input("CATEGORYID", req.params.id)
-           .execute('getProductByCategory')).recordset as IProduct[];
+           .execute('getProductsByCategory')).recordset as IProduct[];
            return res.status(200).json(products);
 
     } catch(error){
-        console.log(error);
-        return res.status(500).json({ message: "Something went wrong" });
+        // console.log(error);
+        return res.status(500).json(error);
     }
 }
 

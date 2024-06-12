@@ -48,7 +48,7 @@ Content-Type: application/json
 
 
 
-GET http://localhost:4000/products/9873f11e-91e7-424c-9ed8-9bf0b92f3d9d
+GET http://localhost:4000/products/95ee46dd-d852-4438-abd1-cebab1f8dfba
 
 
 #####
@@ -73,6 +73,6 @@ DELETE http://localhost:4000/products/9873f11e-91e7-424c-9ed8-9bf0b92f3d9d
 
 # Get by category id
 
-GET http://localhost:4000/products/622b9278-a946-4733-925d-a88814ff565d
+GET http://localhost:4000/products/category/5888b6e2-958f-4ba0-b8aa-2bb16eacb1da
 
 ####
